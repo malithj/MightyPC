@@ -65,8 +65,8 @@ def file_preparation():
         erc_df.loc[idx, 'dblp'] = url
         erc_df.loc[idx, 'google_scholar'] = scholar
 
-    erc_df[['name', 'dblp', 'google_scholar']].to_json('../data/erc.json', orient='records')
-    pc_df[['name', 'dblp', 'google_scholar']].to_json('../data/pc.json', orient='records')
+    erc_df[['name', 'email', 'dblp', 'google_scholar']].to_json('../data/erc.json', orient='records')
+    pc_df[['name', 'email', 'dblp', 'google_scholar']].to_json('../data/pc.json', orient='records')
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', 5000)
 
